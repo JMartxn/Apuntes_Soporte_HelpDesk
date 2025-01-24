@@ -1,35 +1,109 @@
-#CÓDIGO PARA EL HTACCESS
+Para proteger correctamente tu instalación de WordPress, debes utilizar un archivo .htaccess que se ubique en dos lugares específicos de tu servidor:
 
-#No listar directorios 
-NOTA: este comando puede fallar en determinados servidores. En ese caso, no usar.
+    Archivo .htaccess en el directorio raíz de WordPress (ubicado en /var/www/html/tu_dominio/): 
+	Este archivo controla las reglas generales de reescritura de URL y otras configuraciones globales que afectan a todo el sitio.
 
+    Archivo .htaccess en el directorio wp-admin (ubicado en /var/www/html/tu_dominio/wp-admin/):
+	Este archivo protege el acceso a la carpeta de administración de WordPress, que es crítica para la seguridad del sitio.
+
+1. .htaccess en el directorio raíz de WordPress
+
+Este archivo se encarga de asegurar que el sitio esté protegido, impidiendo el acceso a archivos sensibles y configurando reglas de reescritura de URL (para que las URLs sean amigables). Aquí se encuentra el bloque para la reescritura de URLs y otras reglas de seguridad.
+
+Ubicación: /var/www/html/tu_dominio/.htaccess
+
+Contenido recomendado para el archivo:
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
+
+# Bloqueo de acceso al archivo wp-config.php
+<Files wp-config.php>
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+# Protege los archivos .htaccess
+<Files ~ "^.*\.([Hh][Tt][Aa])">
+  Order allow,deny
+  Deny from all
+  Satisfy all
+</Files>
+
+# Desactiva el listado de directorios
 Options -Indexes
 
-#Bloquear archivos sensibles
+# Bloqueo de acceso a wp-admin/includes y wp-includes
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^wp-admin/includes/ - [F,L]
+RewriteRule !^wp-includes/ - [S=3]
+RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
+RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
+RewriteRule ^wp-includes/theme-compat/ - [F,L]
+</IfModule>
 
-<files .htaccess>
-Order allow,deny
-Deny from all
-</files>
-
-<files wp-config.php>
-Order allow,deny
-Deny from all
-</files>
-
-#Bloquear archivos instalación
-
-<files install.php>
-Order allow,deny
-Deny from all
-</files>
-
-<files setup-config.php>
-Order allow,deny
-Deny from all
-</files>
-
-#CÓDIGO PARA LOS HTACCESS CREADOS EN /wp-content/uploads, /wp-content/plugins y /wp-content/themes
-<Files *.php>
-deny from all
+# Evita el acceso a wp-login.php (puedes permitir acceso solo desde una IP específica)
+<Files wp-login.php>
+  Order Allow,Deny
+  Deny from all
+  Allow from 127.0.0.1
 </Files>
+
+2. .htaccess en el directorio wp-admin
+
+El archivo .htaccess en el directorio wp-admin proporciona una capa adicional de seguridad al restringir el acceso a la administración de WordPress. Aquí puedes especificar restricciones adicionales, como permitir solo ciertos rangos de IP o reforzar la autenticación.
+
+Ubicación: /var/www/html/tu_dominio/wp-admin/.htaccess
+
+Contenido recomendado para el archivo:
+
+# Bloqueo de acceso a wp-admin desde cualquier IP que no sea la especificada
+<Files wp-login.php>
+  Order Deny,Allow
+  Deny from all
+  Allow from 127.0.0.1   # Sustituye esta IP por la de tu red interna si es necesario
+</Files>
+
+# Protege los archivos wp-admin
+<Files ~ "^.*\.([Hh][Tt][Aa])">
+  Order allow,deny
+  Deny from all
+  Satisfy all
+</Files>
+
+Pasos para aplicar las configuraciones:
+
+    Crea o edita el archivo .htaccess en el directorio raíz:
+        Navega al directorio raíz de WordPress y abre o crea el archivo .htaccess (ubicado en /var/www/html/tu_dominio/).
+        Agrega las configuraciones de seguridad, como la protección de wp-config.php, la protección del archivo .htaccess, y las reglas de reescritura de URL.
+
+    Crea o edita el archivo .htaccess en wp-admin:
+        Navega al directorio wp-admin de tu instalación de WordPress (/var/www/html/tu_dominio/wp-admin/).
+        Crea un archivo .htaccess o edítalo si ya existe.
+        Agrega las reglas de restricción de acceso a la administración (por ejemplo, restringiendo el acceso a wp-login.php a ciertas IPs).
+
+    Guarda y aplica los cambios:
+        Guarda ambos archivos y asegúrate de que el servidor Apache esté configurado para reconocer y aplicar las reglas de .htaccess.
+        Si es necesario, reinicia Apache con el siguiente comando para aplicar los cambios:
+
+        sudo systemctl restart apache2
+
+Consejos adicionales:
+
+    Permitir acceso solo desde ciertas IPs: Si quieres restringir aún más el acceso a ciertas secciones (como el login o el directorio wp-admin), 
+	puedes permitir solo ciertas direcciones IP o rangos IP (por ejemplo, solo permitir la IP de tu oficina o la IP interna de tu servidor).
+    Revisa los permisos: Asegúrate de que el archivo .htaccess tenga los permisos adecuados (normalmente 644), para que sea accesible 
+	por Apache pero no editable por otros usuarios no autorizados.
+
+Estas configuraciones mejoran la seguridad de tu instalación de WordPress, limitando el acceso a archivos sensibles y asegurando que solo usuarios autorizados puedan 
+acceder a la administración y otras áreas críticas del sitio.
