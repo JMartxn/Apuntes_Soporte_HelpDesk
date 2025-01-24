@@ -14,28 +14,27 @@
 
 ## Por su propósito
 
-| **Criterio de clasificación** | **Tipo de SO**     | **Descripción**                                         | **Ejemplos**                                  |
-|-------------------------------|--------------------|---------------------------------------------------------|-----------------------------------------------|
-| **SO de escritorio**           | Diseñados para usuarios finales en PCs o laptops.    | Windows, macOS, Linux (Ubuntu, Mint)                |
-## Por su núcleo (kernel)
-|-------------------------------|--------------------|---------------------------------------------------------|-----------------------------------------------|
-| **Híbrido**                   | Combina características de otros modelos.           | Windows NT, macOS                                |
-
-El núcleo de Windows es **híbrido**, combinando ventajas de microkernels (modularidad y seguridad) y monolíticos (rendimiento).
-* **WOW64**: Subsistema que permite ejecutar aplicaciones de 32 bits en entornos de 64 bits.  
-* **Memoria**: Modelo de paginación para mapear direcciones físicas y virtuales; aislamiento de aplicaciones.
+## Híbrido
+Combina características de otros modelos. | **Windows NT**, **macOS**  
+El núcleo de Windows es híbrido, combinando ventajas de microkernels (modularidad y seguridad) y monolíticos (rendimiento).
+- **WOW64**: Subsistema que permite ejecutar aplicaciones de 32 bits en entornos de 64 bits.
+- **Memoria**: Modelo de paginación para mapear direcciones físicas y virtuales; aislamiento de aplicaciones.
 
 ## Por su licencia
-|-------------------------------|--------------------|---------------------------------------------------------|-----------------------------------------------|
-| **Propietarios**              | Requieren licencia y no permiten acceso al código.  | Windows, macOS                                    |
+| Licencia     | Descripción                                     | Ejemplos               |
+|--------------|-------------------------------------------------|------------------------|
+| **Propietarios** | Requieren licencia y no permiten acceso al código. | **Windows**, **macOS** |
 
 ## Por su interfaz
-|-------------------------------|--------------------|---------------------------------------------------------|-----------------------------------------------|
-| **Gráfica**                   | Interacción mediante GUI.                          | Windows, macOS                                   |
+| Interfaz     | Descripción                                     | Ejemplos               |
+|--------------|-------------------------------------------------|------------------------|
+| **Gráfica**  | Interacción mediante GUI.                       | **Windows**, **macOS** |
 
 ## Por su arquitectura soportada
-|-------------------------------|--------------------|---------------------------------------------------------|-----------------------------------------------|
-| **x86/x64**                   | Para PCs tradicionales.                              | Windows, Linux                                   |
+| Arquitectura | Descripción                                     | Ejemplos               |
+|--------------|-------------------------------------------------|------------------------|
+| **x86/x64**  | Para PCs tradicionales.                        | **Windows**, **Linux** |
+
 
 ## **Diferencias técnicas entre Windows 10 y Windows 11**
 
