@@ -1,0 +1,35 @@
+#CÓDIGO PARA EL HTACCESS
+
+#No listar directorios 
+NOTA: este comando puede fallar en determinados servidores. En ese caso, no usar.
+
+Options -Indexes
+
+#Bloquear archivos sensibles
+
+<files .htaccess>
+Order allow,deny
+Deny from all
+</files>
+
+<files wp-config.php>
+Order allow,deny
+Deny from all
+</files>
+
+#Bloquear archivos instalación
+
+<files install.php>
+Order allow,deny
+Deny from all
+</files>
+
+<files setup-config.php>
+Order allow,deny
+Deny from all
+</files>
+
+#CÓDIGO PARA LOS HTACCESS CREADOS EN /wp-content/uploads, /wp-content/plugins y /wp-content/themes
+<Files *.php>
+deny from all
+</Files>
