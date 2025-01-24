@@ -177,8 +177,63 @@ La elección entre Oracle SQL y MySQL depende del tamaño del proyecto, el presu
 
 ## **Ejemplo de código sql para mySQL.**
 
-| create database holamundo;show databases;use holamundo;CREATE TABLE animales (	id int,    tipo varchar (255),    estado varchar (255),    PRIMARY KEY (id)    );    INSERT INTO animales (tipo, estado) VALUES ('Chanchito','feliz');        ALTER TABLE animales MODIFY COLUMN id int auto\_increment;    SHOW CREATE TABLE animales;CREATE TABLE \`animales\` (  \`id\` int NOT NULL AUTO\_INCREMENT,  \`tipo\` varchar(255) DEFAULT NULL,  \`estado\` varchar(255) DEFAULT NULL,  PRIMARY KEY (\`id\`)) ;\-- para hacer comentarios añadir dos veces esa línea.INSERT INTO animales (tipo, estado) VALUES ('Chanchito','feliz');INSERT INTO animales (tipo, estado) VALUES ('dragon','feliz');INSERT INTO animales (tipo, estado) VALUES ('felipe','feliz');SELECT \* FROM animales;SELECT \* FROM animales WHERE id\=1;SELECT \* FROM animales WHERE estado \= 'feliz';SELECT \* FROM animales WHERE estado \= 'feliz' AND tipo \= 'chanchito';UPDATE animales SET estado \= 'superfeliz' WHERE id \= 3DELETE FROM animales WHERE id\=2;PARA delete y update te pide mysql el id. Para evitar errores masivos. |
-| :---- |
+```sql
+-- Crear la base de datos
+CREATE DATABASE holamundo;
+
+-- Mostrar bases de datos
+SHOW DATABASES;
+
+-- Usar la base de datos recién creada
+USE holamundo;
+
+-- Crear la tabla animales
+CREATE TABLE animales (
+  id INT,
+  tipo VARCHAR(255),
+  estado VARCHAR(255),
+  PRIMARY KEY (id)
+);
+
+-- Insertar datos en la tabla
+INSERT INTO animales (tipo, estado) VALUES ('Chanchito','feliz');
+
+-- Modificar la columna id para que sea autoincrementable
+ALTER TABLE animales MODIFY COLUMN id INT AUTO_INCREMENT;
+
+-- Ver la estructura de la tabla
+SHOW CREATE TABLE animales;
+
+-- Crear la tabla animales con autoincremento para id
+CREATE TABLE `animales` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `tipo` VARCHAR(255) DEFAULT NULL,
+  `estado` VARCHAR(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- Insertar más datos en la tabla
+INSERT INTO animales (tipo, estado) VALUES ('Chanchito','feliz');
+INSERT INTO animales (tipo, estado) VALUES ('dragon','feliz');
+INSERT INTO animales (tipo, estado) VALUES ('felipe','feliz');
+
+-- Consultas SELECT
+SELECT * FROM animales;
+
+-- Consultas con condiciones WHERE
+SELECT * FROM animales WHERE id=1;
+SELECT * FROM animales WHERE estado = 'feliz';
+SELECT * FROM animales WHERE estado = 'feliz' AND tipo = 'chanchito';
+
+-- Actualizar el estado de un animal
+UPDATE animales SET estado = 'superfeliz' WHERE id = 3;
+
+-- Eliminar un animal
+DELETE FROM animales WHERE id=2;
+
+-- Nota: Para el comando DELETE y UPDATE es necesario especificar un id para evitar errores masivos.
+
+
 
 He ampliado la tabla con más ejemplos de tipos de combinaciones (joins) y similares. Aquí está la versión actualizada:
 
