@@ -25,6 +25,18 @@ El núcleo de Windows es híbrido, combinando ventajas de microkernels (modulari
 |--------------|-------------------------------------------------|------------------------|
 | **Propietarios** | Requieren licencia y no permiten acceso al código. | **Windows**, **macOS** |
 
+## Tipos de Licencias de Windows
+
+| Licencia                  | Descripción                                                                                  | Ejemplos                          |
+|---------------------------|----------------------------------------------------------------------------------------------|-----------------------------------|
+| **Licencia OEM (Original Equipment Manufacturer)** | Licencia vinculada a un equipo específico, generalmente preinstalada en el hardware. No es transferible. | Windows 10 Home OEM, Windows 10 Pro OEM |
+| **Licencia Retail (Comercial)**  | Licencia de venta al público, generalmente adquirida en tiendas o en línea. Puede transferirse entre dispositivos. | Windows 10 Home, Windows 10 Pro |
+| **Licencia por Volumen**   | Licencia para empresas o instituciones que necesitan instalar Windows en múltiples equipos. Permite la activación en varias máquinas con un solo código. | Windows 10 Enterprise, Windows 10 Education |
+| **Licencia de Estudiante (EDU)** | Licencia especial para estudiantes, generalmente a través de acuerdos con universidades o instituciones educativas. | Windows 10 Education |
+| **Licencia de Evaluación (Trial)** | Licencia temporal que permite usar el sistema operativo por un período limitado, generalmente 30 o 90 días. | Windows 10 Enterprise Evaluation |
+| **Licencia de Actualización** | Licencia que permite actualizar una versión anterior de Windows a una versión más reciente, por ejemplo de Windows 7/8 a Windows 10. | Windows 10 Upgrade |
+
+
 ## Por su interfaz
 | Interfaz     | Descripción                                     | Ejemplos               |
 |--------------|-------------------------------------------------|------------------------|
