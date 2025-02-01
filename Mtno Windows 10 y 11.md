@@ -1,4 +1,4 @@
-# **HOLA ME PRESENTO SOY WIN 10 Y WIN 11**
+# ** WIN 10 Y WIN 11 **
 
 ## **Arquitectura del Sistema Operativo de Windows**
 
