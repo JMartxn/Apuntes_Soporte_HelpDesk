@@ -1,4 +1,4 @@
-# Guía de Seguridad para WordPress: Nginx vs Apache
+# Mantenimiento a nivel sistemas de Seguridad para WordPress: Nginx vs Apache
 
 A continuación se presenta una tabla detallada con los pasos a seguir para asegurar tu instalación de WordPress, especificando las configuraciones necesarias tanto para Nginx como para Apache.
 
