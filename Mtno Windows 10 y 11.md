@@ -333,15 +333,21 @@ Utiliza la **Herramienta de Diagnóstico de Memoria de Windows** (`mdsched.exe`)
     - Ejecuta `DISM /Online /Cleanup-Image /RestoreHealth` para reparar la imagen del sistema.
 
 # BONUS
-BONUS DE INFORMACIÓN Descarga Win Original--- https://www.genbeta.com/windows/4-formas-descargar-iso-windows-10-gratis
+BONUS DE INFORMACIÓN
+Descarga Win Original--- https://www.genbeta.com/windows/4-formas-descargar-iso-windows-10-gratis
 
 Hacer una ISO "limpia" https://www.softzone.es/noticias/windows/crear-iso-windows-11-24h2-personal/
 
 Mantenimiento SysInternals: https://learn.microsoft.com/es-es/sysinternals/ https://blogthinkbig.com/windows-sysinternals-pequenas-utilidades-para-tu-pc
 
-Lo primero analizar lo que tiene instalado y valorar desinstalar programas innecesarios. Articulo de como hacer eso a mano --- https://www.xataka.com/basics/como-limpiar-windows-10-a-fondo-borra-que-no-necesitas-seguridad Ahora usando programas --- https://www.xataka.com/basics/mejores-aplicaciones-herramientas-gratis-para-limpiar-windows-10-formatear Valora el entorno y realiza pruebas, no sería la primera vez que un programa no es tan quirurgico como hacerlo a mano y rompe algo.
+Lo primero analizar lo que tiene instalado y valorar desinstalar programas innecesarios.
+Articulo de como hacer eso a mano
+--- https://www.xataka.com/basics/como-limpiar-windows-10-a-fondo-borra-que-no-necesitas-seguridad
+Ahora usando programas
+--- https://www.xataka.com/basics/mejores-aplicaciones-herramientas-gratis-para-limpiar-windows-10-formatear 
+Valora el entorno y realiza pruebas, no sería la primera vez que un programa no es tan quirurgico como hacerlo a mano y rompe algo.
 
-Sugerencias mejorar rendimiento WINDOWS de forma manual.
+## Sugerencias mejorar rendimiento WINDOWS de forma manual.
 
     https://support.microsoft.com/es-es/windows/sugerencias-para-mejorar-el-rendimiento-del-pc-en-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96 
 
@@ -349,30 +355,26 @@ https://www.adslzone.net/esenciales/windows-10/trucos-acelerar-windows/
 
 https://computerhoy.20minutos.es/windows/formas-rapidas-optimizar-maximo-pc-windows-11-1334092
 
-Programas optimizar Windows de terceros
+## Programas optimizar Windows de terceros
 
 https://www.genbeta.com/a-fondo/estas-15-herramientas-gratis-que-siempre-instalo-para-administrar-optimizar-mi-sistema-windows
 
-Opciones para limpiar a posteriori de Soft no necesario que se preinstala con Windows.:
+## Opciones para limpiar a posteriori de Soft no necesario que se preinstala con Windows otra opción usar Windows LSTC:
 
 https://www.xataka.com/basics/como-desinstalar-aplicaciones-preinstaladas-bloatware-windows-facilmente-solo-comando https://www.oo-software.com/en/ooappbuster https://github.com/nyxiereal/XToolbox
 
 Herramientas PRO de analisis para mantenimiento de Windows son:
 
-Hay que conocer : la de NirSoft y la de SysInternals y para manejarlas todas juntas como si fuesen un programa, lee el siguiente articulo. https://www.genbeta.com/herramientas/nirlauncher-lanzador-cientos-aplicaciones-portables-que-administrar-nuestro-sistema-windows
+Hay que conocer : la de NirSoft
+https://www.genbeta.com/herramientas/nirlauncher-lanzador-cientos-aplicaciones-portables-que-administrar-nuestro-sistema-windows
 
-Con esto , tendrás una guía de windows y tooooodo lo que se puede tocar. OJITO con lo que rompes.
-
-Mantenimiento Windows Server
+## Mantenimiento Windows Server
 
 Oficial --- https://learn.microsoft.com/es-es/windows-server/
 
 Win Server 2022 -- https://learn.microsoft.com/es-es/windows-server/administration/performance-tuning/
 
-Software de mantenimiento RECOMENDADO por mi. -Glary utilities
 
-Software de mantenimiento RECOMENDADO por mi.
--Glary utilities
 
 
 
